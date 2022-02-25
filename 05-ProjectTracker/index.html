@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Project Tracker</title>
+</head>
+
+<!-- holds the moment api and project title -->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4 center">Project Tracker</h1>
+        <p class="lead">Current Time & Date</p>
+        <div class="time"></div>
+    </div>
+</div>
+
+
+<div id="dialog-form" title="Add a New Project">
+    <!-- <p class="validateTips">Add a new project.</p> -->
+
+    <form>
+        <fieldset>
+            <label for="name">Project Name</label>
+            <input type="text" name="name" id="pName" placeholder="Enter your project name" class="text ui-widget-content ui-corner-all">
+            <label for="btn">Project Type</label>
+            <select name="Project btn-primary" id="btn">
+                <option>Web Application (Front End)</option>
+                <option>Web Application (Back End)</option>
+                <option>Mobile Application (Front End)</option>
+                <option>Full Stack Application (Front End)</option>
+            </select>
+
+            <label for="name">Project Type</label>
+            <input type="text" name="name" id="pType" placeholder="Pick a project" class="text ui-widget-content ui-corner-all">
+            <label for="name">Hourly Rate $</label>
+            <input type="text" name="name" id="hourlyRate" placeholder="$" class="text ui-widget-content ui-corner-all">
+            <label for="name">Due Date</label>
+            <input type="text" name="name" id="dueDate" placeholder="When is the project due?" class="text ui-widget-content ui-corner-all">
+
+            <!-- Allow form submission with keyboard without duplicating the dialog button -->
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        </fieldset>
+    </form>
+</div>
+
+<div id="columnMain" class="row">
+    <div class="col1" style="background-color:hsl(0, 100%, 57%);">
+        <h2>Project Name</h2>
+        <p>Data..</p>
+    </div>
+    <div class="col2" style="background-color:hsl(0, 100%, 57%);">
+        <h2>Project Type</h2>
+        <p>Data..</p>
+    </div>
+    <div class="col3" style="background-color:hsl(0, 100%, 57%)">
+        <h2>Hourly Rate($)</h2>
+        <p>Data..</p>
+    </div>
+    <div class="col4" style="background-color:hsl(0, 100%, 57%)">
+        <h2>Due Date</h2>
+        <p>Data..</p>
+    </div>
+    <div class="col5" style="background-color:hsl(0, 100%, 57%);">
+        <h2>Date until Due Date</h2>
+        <p>Data..</p>
+    </div>
+    <div class="col6" style="background-color:hsl(0, 100%, 57%)">
+        <h2>Potential Total Earning($)</h2>
+        <p>Data..</p>
+    </div>
+</div>
+
+<div id="users-contain" class="ui-widget">
+    <h1>Instructions :</h1>
+    <table id="users" class="ui-widget ui-widget-content">
+
+        <ul class="ui-widget-header">
+            <p>Click the button below to open a form and provide information for the following:</p>
+        </ul>
+        <ul>
+            <li>Project Name</li>
+            <li>Project Type</li>
+            <li>Due Date</li>
+            <li>Hourly Rate</li>
+        </ul>
+    </table>
+</div>
+<button id="create-user">Add Project</button>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
